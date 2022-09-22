@@ -1,6 +1,7 @@
 
 const THREE = require('three');
 const OrbitControls = require('three-orbit-controls')(THREE)
+
 import Stats from 'stats-js'
 import DAT from 'dat-gui'
 
@@ -52,7 +53,7 @@ function init(callback, update) {
     framework.scene = scene;
     framework.camera = camera;
     framework.renderer = renderer;
-
+    framework.uniforms = {time: { value: 10000 }, atmosphere: { value: 100 }};
     // begin the animation loop
     (function tick() {
       stats.begin();
