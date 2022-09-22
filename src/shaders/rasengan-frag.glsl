@@ -12,6 +12,22 @@ float noise3D( vec3 p )
                  43758.5453);
 }
 
+float noise3D2( vec3 p )
+{
+    return fract(cos((dot(p, vec3(150.1,
+                                  23.7,
+                                  191.999)))) *         
+                 600445.5453);
+}
+
+float noise3D3( vec3 p )
+{
+    return fract(sin(cos(dot(p, vec3(50.1,
+                                  313.7,
+                                  200.999)))) *         
+                 43758.5453);
+}
+
 float cosine_interpolate(float a, float b, float t)
 {
     // Result in range [0, 1]
